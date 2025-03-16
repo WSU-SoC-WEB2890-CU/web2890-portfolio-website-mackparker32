@@ -1,0 +1,39 @@
+// overridden variables/styles
+@import "./variables.scss";
+
+// bootstrap import
+@import "bootstrap/scss/bootstrap";
+
+// global styles
+body {
+  background-color: $success;
+}
+
+html,
+body {
+  height: 100%; // Ensures full height
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; // Ensures the container fills the screen
+}
+
+.main-container {
+  flex-grow: 1; // Pushes footer down when content is short
+}
+
+// import styles
+@import "./MainNavigation.scss"; // navigation
+@import "./PageContent.scss"; // page content wrapper
+@import "./Home.scss"; // homepage
+@import "./PortfolioList.scss"; // portfolio list
+@import "./PortfolioDetail.scss"; // portfolio detail
+@import "./CaseStudy.scss"; // case study page
+@import "./About.scss"; // about page
+@import "./Contact.scss"; // contact page
+@import "./MainFooter.scss"; //footer

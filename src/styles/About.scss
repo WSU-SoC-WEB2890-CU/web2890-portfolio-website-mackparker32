@@ -1,0 +1,103 @@
+@import "./variables.scss";
+
+#aboutMe {
+  font-family: $poppins;
+  background-color: lighten($success, 5%);
+  padding: 2rem 0;
+
+  h2 {
+    font-family: $lora;
+    color: $primary;
+    font-size: 2rem;
+  }
+
+  .paragraph-container {
+    background: lighten($secondary, 5%);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: darken($primary, 10%);
+    }
+  }
+
+  h3 {
+    font-family: $lora;
+    color: $info;
+    font-size: 1.75rem;
+    margin-top: 2rem;
+  }
+
+  .skills-table {
+    width: 100%;
+    max-width: 600px;
+    border-collapse: collapse;
+    margin: auto;
+
+    tr {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.5rem 1rem;
+    }
+
+    td {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .skill-name {
+      font-weight: bold;
+      font-size: 1.2rem;
+      color: $primary;
+    }
+
+    .skill-logo {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+      transition: transform 0.3s ease-in-out;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  // sm styles
+  @media (max-width: 576px) {
+    .paragraph-container {
+      padding: 1rem;
+    }
+
+    h2 {
+      font-size: 1.75rem;
+    }
+
+    .skill-logo {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  // md styles
+  @media (min-width: 768px) {
+    .paragraph-container {
+      padding: 2rem;
+    }
+  }
+
+  // lg styles
+  @media (min-width: 992px) {
+    .paragraph-container {
+      padding: 2.5rem;
+    }
+  }
+}
