@@ -1,0 +1,39 @@
+.portfolio-detail {
+  text-align: center;
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+
+  .btn {
+    min-width: 120px;
+  }
+
+  // sm Styles
+  @media (max-width: 576px) {
+    .btn {
+      font-size: 0.9rem;
+      padding: 0.5rem 1rem;
+    }
+  }
+
+  // md styles
+  @media (min-width: 768px) {
+    h2 {
+      font-size: 2rem;
+    }
+  }
+
+  // lg styles
+  @media (min-width: 992px) {
+    h2 {
+      font-size: 2.2rem;
+    }
+  }
+}
