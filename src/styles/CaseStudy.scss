@@ -1,0 +1,85 @@
+@import "./variables.scss";
+
+#caseStudy {
+  font-family: $poppins;
+  background-color: lighten($success, 5%);
+  padding: 2rem 0;
+
+  .case-study-item {
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: white;
+
+    h2 {
+      font-family: $lora;
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+  }
+
+  // background colors for sections
+  .sushi {
+    background: $info;
+    color: #000;
+  }
+
+  .problem {
+    background: $secondary;
+    color: #333;
+  }
+
+  .goal {
+    background: $info;
+    color: #000;
+  }
+
+  .audience {
+    background: $secondary;
+    color: #333;
+  }
+
+  .connections {
+    background: $info;
+    color: #000;
+  }
+
+  // sm styles
+  @media (max-width: 576px) {
+    .case-study-item {
+      padding: 1rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+
+  // md styles
+  @media (min-width: 768px) {
+    .case-study-item {
+      padding: 2rem;
+    }
+  }
+
+  // lg styles
+  @media (min-width: 992px) {
+    .case-study-item {
+      padding: 2.5rem;
+    }
+  }
+}
