@@ -9,6 +9,7 @@ const ContactPage = () => {
     firstName: "",
     lastName: "",
     email: "",
+    inquiry: "",
   });
 
   const handleChange = (event) => {
@@ -20,7 +21,7 @@ const ContactPage = () => {
       console.log(formData);
       console.log("The formData was successfully updated to firebase!");
 
-      setFormData({ firstName: "", lastName: "", email: "" });
+      setFormData({ firstName: "", lastName: "", email: "", inquiry: "" });
     }
   }, [actionData]);
 
@@ -67,6 +68,20 @@ const ContactPage = () => {
             />
           </div>
 
+          <div className="form-group">
+            <label htmlFor="inquiry">Inquiry</label>
+            <textarea
+              id="inquiry"
+              name="inquiry"
+              value={formData.inquiry}
+              onChange={handleChange}
+              className="form-control"
+              rows="6"
+              placeholder='e.g. "I want to collaborate"'
+              required
+            />
+          </div>
+
           <button type="submit" className="btn btn-primary">
             Submit
           </button>
@@ -74,6 +89,43 @@ const ContactPage = () => {
             <p className="success-message">Submitted successfully!</p>
           )}
         </Form>
+      </div>
+
+      <div class="socialMedia border rounded p-4 mb-4 bg-white shadow">
+        <p>
+          <strong>Email: </strong>mackenzieparker@mail.weber.edu
+        </p>
+
+        <ul class="socials list-unstyled d-flex flex-column gap-2 mt-3">
+          <li>
+            <a
+              href="mailto:mackenzieparker@mail.weber.edu"
+              class="text-decoration-none"
+            >
+              <i class="bi bi-envelope-fill me-2"></i>Email Mack Parker
+            </a>
+          </li>
+          <li>
+            <a href="https://facebook.com" class="text-decoration-none">
+              <i class="bi bi-facebook me-2"></i>Facebook
+            </a>
+          </li>
+          <li>
+            <a href="https://instagram.com" class="text-decoration-none">
+              <i class="bi bi-instagram me-2"></i>Instagram
+            </a>
+          </li>
+          <li>
+            <a href="https://linkedin.com" class="text-decoration-none">
+              <i class="bi bi-linkedin me-2"></i>LinkedIn
+            </a>
+          </li>
+          <li>
+            <a href="https://handshake.com" class="text-decoration-none">
+              <i class="bi bi-briefcase me-2"></i>Handshake
+            </a>
+          </li>
+        </ul>
       </div>
     </PageContent>
   );

@@ -26,6 +26,11 @@ const AboutPage = () => {
         <div className="row justify-content-center">
           <div className="col-lg-8 text-center">
             <h2 className="mb-4">Web and User Experience Student</h2>
+            <img
+              src="src/images/self_portrait.JPG"
+              alt="self portrait of Mack Parker"
+              id="selfPortrait"
+            />
             <div className="paragraph-container">
               <p>
                 I’m in my fourth year of college, and I just switched my major
